@@ -7,7 +7,7 @@ import numpy as np
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel(r"house_prices.xlsx")  
+    df = pd.read_excel(r"house_prices.csv")  
 
     drop_cols = ['date','floors','waterfront','view','condition',
                  'yr_built','yr_renovated','street','city','statezip','country']
@@ -54,6 +54,7 @@ if st.button("🔮 Predict Price"):
 st.subheader("📊 Model Performance")
 st.write(f"**R² Score:** {score:.2f}")
 st.write(f"**RMSE:** {rmse:,.2f}")
+
 
 
 
