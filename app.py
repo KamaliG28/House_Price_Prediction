@@ -9,9 +9,6 @@ csv_path = "C:/Users/gks/Downloads/Deploy/house_prices.csv"
 try:
     df = pd.read_csv(csv_path)
     st.success("Data loaded successfully!")
-except FileNotFoundError:
-    st.error("CSV file not found. Please check the path.")
-    st.stop()
 
 # Show raw data
 if st.checkbox("Show raw data"):
@@ -36,5 +33,6 @@ st.subheader("🔍 Correlation Heatmap")
 fig2, ax2 = plt.subplots(figsize=(10, 6))
 sns.heatmap(df[numeric_cols].corr(), annot=True, cmap="coolwarm", ax=ax2)
 st.pyplot(fig2)
+
 
 
