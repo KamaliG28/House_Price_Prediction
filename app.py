@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 
 # Title
 st.title("🏠 House Price Prediction App")
@@ -37,4 +36,5 @@ st.subheader("🔍 Correlation Heatmap")
 fig2, ax2 = plt.subplots(figsize=(10, 6))
 sns.heatmap(df[numeric_cols].corr(), annot=True, cmap="coolwarm", ax=ax2)
 st.pyplot(fig2)
+
 
