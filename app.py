@@ -10,9 +10,6 @@ try:
     df = pd.read_csv(csv_path)
     st.success("Data loaded successfully!")
 
-# Show raw data
-if st.checkbox("Show raw data"):
-    st.write(df)
 
 # Basic stats
 st.subheader("📊 Summary Statistics")
@@ -33,6 +30,7 @@ st.subheader("🔍 Correlation Heatmap")
 fig2, ax2 = plt.subplots(figsize=(10, 6))
 sns.heatmap(df[numeric_cols].corr(), annot=True, cmap="coolwarm", ax=ax2)
 st.pyplot(fig2)
+
 
 
 
